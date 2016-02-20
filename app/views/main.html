@@ -1,0 +1,41 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default" data-ng-controller="ConvertCtrl">
+                <div class="panel-body">
+                    <form action="" method="POST" role="form">
+                        <legend>Currency Converter</legend>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="">From</label>
+                                <select ng-model="fromType" class="form-control" required data-ng-change="currencyConvert()" ng-options="k for (k, v) in rates track by v">
+                                    <option value="">--Select--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="">To</label>
+                                <select ng-model="toType" class="form-control" required data-ng-change="forExConvert()" ng-options="k for (k, v) in rates track by v">
+                                    <option value="">--Select--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="">From Value</label>
+                                <input type="number" class="form-control" placeholder="Enter value" data-ng-model="fromValue" data-ng-change="currencyConvert()">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="">To Value</label>
+                                <input type="text" class="form-control" placeholder="Enter value" data-ng-model="toValue" data-ng-change="currencyConvert()">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
